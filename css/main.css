@@ -116,6 +116,10 @@ img {
   justify-items: center;
 }
 
+.button.button-hero {
+  margin: 0px 700px 0px 700px;
+}
+
 .backdrop {
   position: fixed;
   left: 0px;
@@ -477,9 +481,8 @@ nav .block-contact {
 }
 
 .hero {
-  padding-bottom: 280px;
-  flex-wrap: wrap;
-  justify-content: center;
+  max-width: 1600px;
+  padding-bottom: 200px;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/fon.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -488,7 +491,7 @@ nav .block-contact {
 .hero_blok-title .title {
   display: block;
   width: 696px;
-  margin: 0px auto;
+  margin: 0px 452px 0px 452px;
   padding-top: 200px;
   margin-bottom: 30px;
   font-weight: 900;
