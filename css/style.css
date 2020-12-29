@@ -251,7 +251,7 @@ nav .block-contact {
 /* герой-- */
 
 .hero {
-  max-width: 1600px;
+  /* max-width: 1600px; */
   padding-bottom: 200px;
   /* display: flex; */
   /* flex-wrap: wrap; */
