@@ -16,14 +16,14 @@
   color: #ffffff;
   background-color: var(--accent-color);
   cursor: pointer;
-  .title & {
-    justify-content: center;
-  }
 }
 .container-button {
-  display: flex;
-  justify-items: center;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-items: center;
+  margin: 0px 700px;
 }
-.button.button-hero {
-  margin: 0px 700px 0px 700px;
-}
+
+// .title .button {
+//   justify-content: center;
+// }

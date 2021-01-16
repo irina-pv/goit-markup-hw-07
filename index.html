@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
         integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
         crossorigin="anonymous" />
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body>
@@ -55,77 +55,92 @@
     <!--герой-->
     <main>
         <section class="hero">
+             <div>
            
-                <div class="hero_blok-title">
-                    <h1 class="title">Эффективные решения для вашего бизнеса</h1>
+                 <div class="hero_blok-title">
+                    <h1 class="title-hero">Эффективные решения для вашего бизнеса</h1>
                 </div>
-                <button class="button button-hero" type="button" data-modal-open> Заказать услугу</button>
-            </div>
+                <div class="container-button"> <button class="button button-hero" type="button" data-modal-open> Заказать услугу</button></div>
+                </div> 
+           
+           
             
             
         </section>
     
     <!---Преимущества-->
-    <section class="feature container">
+    <section class="feature">
+       
         <h2 class="visually-hidden">Преимущества</h2>
+         <div class="container">
         <ul class="feature-icon">
-            <div class="box-feature">
-                <li>
+          
+           <li> <div>
+                 <div class="box-feature">
                     <svg class="box-icon">
                         <use href="./img/sprite.svg#antenna">
                         </use>
                     </svg>
-                </li>
-            </div>
+                </div>
+                <div>
+                    <h3 class="title">Внимание к деталям</h3>
+                    <p>Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
+                </div>
+           </div> </li>
+        
+            
 
-
-            <div class="box-feature">
-                <li>
+             <li>
+                 <div>
+                 <div class="box-feature">
+               
                     <svg class="box-icon">
                         <use href="./img/sprite.svg#clock">
                         </use>
                     </svg>
-                </li>
-            </div>
-            <div class="box-feature">
-                <li>
+                 </div>
+                 <div>
+                    <h3 class="title">Пунктуальность</h3>
+                    <p>Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
+                 </div>
+                </div>
+        </li>
+            
+            <li>
+                <div>
+                <div class="box-feature">
+                
                     <svg class="box-icon">
                         <use href="./img/sprite.svg#diagram">
                         </use>
                     </svg>
-                </li>
+                </div>
+                <div>
+                    <h3 class="title">Планирование</h3>
+                    <p>Равным образом консультация с широким активом в значительной степени обуславливает.</p>
+                </div>
+                
             </div>
-            <div class="box-feature">
-                <li>
-                    <svg class="box-icon">
-                        <use href="./img/sprite.svg#astronaut">
-                        </use>
-                    </svg>
-                </li>
-            </div>
-        </ul>
-        <ul class="feature-list">
-            <li>
-                <h3 class="title">Внимание к деталям</h3>
-                <p>Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
-            </li>
+        </li>
+        
+                    <li>
+                        <div>
+                            <div class="box-feature">
+                        
+                                <svg class="box-icon">
+                                    <use href="./img/sprite.svg#astronaut">
+                                    </use>
+                                </svg>
+                            </div> 
+                                <div>
+                                    <h3 class="title">Современные технологии</h3>
+                                     <p>Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
+                                </div>
+                        </div>
+                    </li>
 
-            <li>
-                <h3 class="title">Пунктуальность</h3>
-                <p>Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
-            </li>
-
-            <li>
-                <h3 class="title">Планирование</h3>
-                <p>Равным образом консультация с широким активом в значительной степени обуславливает.</p>
-            </li>
-
-            <li>
-                <h3 class="title">Современные технологии</h3>
-                <p>Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
-            </li>
-
-        </ul>
+        </ul></div>
+       
 
     </section>
 
@@ -337,67 +352,73 @@
         <div class="container">
             <ul class="list-client">
                 <li>
-
-
+                    
                     <a class="client-link" href="">
                         <div class="blok-client">
-                            <svg class="client-icon" width="45" height="50">
+
+                           <svg class="client-icon" width="45" height="50">
                                 <use href="./img/sprite.svg#logo-1"></use>
                             </svg>
-                        </div>
-                    </a>
-
-
+                        
+                    </div></a>
                 </li>
 
                 <li>
-
+                    
                     <a class="client-link " href="">
                         <div class="blok-client">
-
+                        
                             <svg class="client-icon" width="40" height="52">
                                 <use href="./img/sprite.svg#logo-2"></use>
                             </svg>
-                        </div>
-                    </a>
+                        
+                    </div></a>
                 </li>
                 <li>
 
                     <a class="client-link " href="">
                         <div class="blok-client">
+                        
                             <svg class="client-icon" width="41" height="43">
                                 <use href="./img/sprite.svg#logo-3"></use>
                             </svg>
-                        </div>
-                    </a>
+                        
+                    </div></a>
                 </li>
-                <li>
+                <li> 
 
                     <a class="client-link " href="">
                         <div class="blok-client">
+                       
                             <svg class="client-icon" width="80" height="42">
                                 <use href="./img/sprite.svg#logo-4"></use>
                             </svg>
-                        </div>
-                    </a>
+                        
+                    </div></a>
                 </li>
+
                 <li>
+                    
                     <a class="client-link " href="">
                         <div class="blok-client">
+                        
                             <svg class="client-icon" width="59" height="47">
                                 <use href="./img/sprite.svg#logo-5"></use>
                             </svg>
-                        </div>
-                    </a>
+                   </div> </a>
+                
                 </li>
+
                 <li>
+                   
                     <a class="client-link " href="">
-                        <div class="blok-client">
+                         <div class="blok-client">
                             <svg class="client-icon" width="89" height="45">
                                 <use href="./img/sprite.svg#logo-6"></use>
                             </svg>
-                        </div>
-                    </a>
+
+                    </div>
+                </a>
                 </li>
             </ul>
         </div>

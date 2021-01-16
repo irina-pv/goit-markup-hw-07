@@ -26,13 +26,13 @@
 
 //portfolio
 @import './base/portfolio/common';
-@import './base/portfolio/container';
+@import './base/index/container';
 
 //components
 @import './components/portfolio/logo-header';
 @import './components/portfolio/filter-button';
 
 // layout:
-// heager
+
 @import './layout/portfolio/header';
 @import './layout/portfolio/hero';

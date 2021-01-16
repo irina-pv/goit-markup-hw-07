@@ -99,7 +99,9 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
@@ -118,6 +120,7 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
   width: 100vw;
   height: 100vh;
+  -webkit-transition: opacity, visibilit, var(--link-transition-time) var(--link--transition-funcsion);
   transition: opacity, visibilit, var(--link-transition-time) var(--link--transition-funcsion);
   visibility: visible;
 }
@@ -134,16 +137,25 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
   background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  -webkit-transition: -webkit-transform var(--link-transition-time) var(--link--transition-funcsion);
+  transition: -webkit-transform var(--link-transition-time) var(--link--transition-funcsion);
   transition: transform var(--link-transition-time) var(--link--transition-funcsion);
+  transition: transform var(--link-transition-time) var(--link--transition-funcsion), -webkit-transform var(--link-transition-time) var(--link--transition-funcsion);
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: -webkit-transform var(--link-transition-time) var(--link--transition-funcsion);
+  transition: -webkit-transform var(--link-transition-time) var(--link--transition-funcsion);
   transition: transform var(--link-transition-time) var(--link--transition-funcsion);
+  transition: transform var(--link-transition-time) var(--link--transition-funcsion), -webkit-transform var(--link-transition-time) var(--link--transition-funcsion);
 }
 
 .form-modal h4 {
@@ -166,7 +178,9 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
@@ -184,14 +198,25 @@ img {
   position: absolute;
   top: 8px;
   right: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .modal {
@@ -241,12 +266,26 @@ img {
   display: inline-block;
   top: 20px;
   left: 10px;
-  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  -webkit-transition: fill var(--link-transition-time) var(--link--transition-funcsion);
   transition: fill var(--link-transition-time) var(--link--transition-funcsion);
 }
 
 .box_modal-input > .modal-input {
   margin-bottom: 10px;
+}
+
+.modal-input textarea::-webkit-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-input textarea:-ms-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-input textarea::-ms-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-input textarea::placeholder {
@@ -266,6 +305,7 @@ img {
   border-radius: 4px;
   outline: none;
   margin-bottom: 20px;
+  -webkit-transition: border var(--link-transition-time) var(--link--transition-funcsion);
   transition: border var(--link-transition-time) var(--link--transition-funcsion);
 }
 
@@ -285,9 +325,13 @@ img {
 
 /* =====делаемм кастомный чекбокс=== */
 .form-modal .form-modal_checkbox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -298,8 +342,12 @@ img {
   line-height: 1.166;
   letter-spacing: 0.03em;
   color: #757575;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .modal__form-checkbox-text::before {
@@ -328,7 +376,9 @@ img {
 .form-modal_checkbox a[href=''] {
   display: block;
   justify-items: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: var(--main-font);
   font-size: 14px;
   line-height: 1.166;
@@ -347,8 +397,12 @@ nav .block-contact {
 }
 
 .header-adress .block-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header-adress .block-contact > li:first-child {
@@ -366,8 +420,12 @@ nav .block-contact {
 }
 
 .header-adress .contact-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header-adress .contact-link:hover .adress-mail,
@@ -377,14 +435,21 @@ nav .block-contact {
 
 .adress-tel,
 .adress-mail {
+  -webkit-transition-property: fill;
   transition-property: fill;
-  transition-duration: var(--link-transition-time);
-  transition-timing-function: var(--link--transition-funcsion);
+  -webkit-transition-duration: var(--link-transition-time);
+          transition-duration: var(--link-transition-time);
+  -webkit-transition-timing-function: var(--link--transition-funcsion);
+          transition-timing-function: var(--link--transition-funcsion);
 }
 
 .header-adress .contact-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header-adress .contact-item:hover .adress-tel,
@@ -398,9 +463,13 @@ nav .block-contact {
 
 /* список навигации  в header*/
 .site-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 90px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .site-nav li:nth-child(n + 2) {
@@ -413,9 +482,12 @@ nav .block-contact {
   line-height: 1.143;
   letter-spacing: 0.02em;
   color: var(--main-color-text);
+  -webkit-transition-property: color;
   transition-property: color;
-  transition-duration: var(--link-transition-time);
-  transition-timing-function: var(--link--transition-funcsion);
+  -webkit-transition-duration: var(--link-transition-time);
+          transition-duration: var(--link-transition-time);
+  -webkit-transition-timing-function: var(--link--transition-funcsion);
+          transition-timing-function: var(--link--transition-funcsion);
 }
 
 .site-nav .link:hover, .site-nav .link:focus {
@@ -460,31 +532,44 @@ nav .block-contact {
 }
 
 .header-adress .contact-link {
+  -webkit-transition-property: color;
   transition-property: color;
-  transition-duration: var(--link-transition-time);
-  transition-timing-function: var(--link--transition-funcsion);
+  -webkit-transition-duration: var(--link-transition-time);
+          transition-duration: var(--link-transition-time);
+  -webkit-transition-timing-function: var(--link--transition-funcsion);
+          transition-timing-function: var(--link--transition-funcsion);
 }
 
 .header-adress .contact-item {
+  -webkit-transition-property: color;
   transition-property: color;
-  transition-duration: var(--link-transition-time);
-  transition-timing-function: var(--link--transition-funcsion);
+  -webkit-transition-duration: var(--link-transition-time);
+          transition-duration: var(--link-transition-time);
+  -webkit-transition-timing-function: var(--link--transition-funcsion);
+          transition-timing-function: var(--link--transition-funcsion);
 }
 
 .hero {
   padding-bottom: 200px;
   margin: 0px auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/fon.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/fon.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .hero_blok-title .title-hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 696px;
   margin: 0px 452px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 200px;
   margin-bottom: 30px;
   font-weight: 900;
@@ -497,6 +582,8 @@ nav .block-contact {
 }
 
 .feature-icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
@@ -516,9 +603,15 @@ nav .block-contact {
 
 .box-feature {
   margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 270px;
   height: 120px;
   border-radius: 4px;
@@ -539,9 +632,15 @@ nav .block-contact {
 
 .feature > ul {
   /* margin-top: 30px; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   list-style: none;
 }
 
@@ -567,8 +666,12 @@ nav .block-contact {
 }
 
 .work .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0 auto;
 }
 
@@ -612,14 +715,19 @@ nav .block-contact {
 }
 
 .team-item {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .team-item .employee {
   border: 1px solid transparent;
   border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team-item .employee:nth-child(-n + 3) {
@@ -652,22 +760,35 @@ li .profession {
 }
 
 .social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 16px;
 }
 
 .social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: #ffffff;
+  -webkit-transition-property: background-color, fill;
   transition-property: background-color, fill;
-  transition-duration: var(--link-transition-time);
-  transition-timing-function: var(--link--transition-funcsion);
+  -webkit-transition-duration: var(--link-transition-time);
+          transition-duration: var(--link-transition-time);
+  -webkit-transition-timing-function: var(--link--transition-funcsion);
+          transition-timing-function: var(--link--transition-funcsion);
 }
 
 .social-link:hover, .social-link:focus {
@@ -678,9 +799,12 @@ li .profession {
   fill: #afb1b8;
   width: 20px;
   height: 20px;
+  -webkit-transition-property: fill;
   transition-property: fill;
-  transition-duration: var(--link-transition-time);
-  transition-timing-function: var(--link--transition-funcsion);
+  -webkit-transition-duration: var(--link-transition-time);
+          transition-duration: var(--link-transition-time);
+  -webkit-transition-timing-function: var(--link--transition-funcsion);
+          transition-timing-function: var(--link--transition-funcsion);
 }
 
 .social-link:hover .social-icon,
@@ -689,9 +813,12 @@ li .profession {
 }
 
 .client-link {
+  -webkit-transition-property: fill;
   transition-property: fill;
-  transition-duration: var(--link-transition-time);
-  transition-timing-function: var(--link--transition-funcsion);
+  -webkit-transition-duration: var(--link-transition-time);
+          transition-duration: var(--link-transition-time);
+  -webkit-transition-timing-function: var(--link--transition-funcsion);
+          transition-timing-function: var(--link--transition-funcsion);
 }
 
 .client-link:focus .client-icon,
@@ -706,16 +833,25 @@ li .profession {
 
 .blok-client {
   padding-top: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 170px;
   height: 90px;
   border-radius: 4px;
   border: 1px solid #afb1b8;
+  -webkit-transition-property: border;
   transition-property: border;
-  transition-duration: var(--link-transition-time);
-  transition-timing-function: var(--link--transition-funcsion);
+  -webkit-transition-duration: var(--link-transition-time);
+          transition-duration: var(--link-transition-time);
+  -webkit-transition-timing-function: var(--link--transition-funcsion);
+          transition-timing-function: var(--link--transition-funcsion);
 }
 
 .blok-client:hover, .blok-client:focus {
@@ -724,8 +860,14 @@ li .profession {
 }
 
 .list-client {
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-bottom: 94px;
   align-items: center;
@@ -789,6 +931,7 @@ address .block-contact > li:last-child {
 }
 
 .block-contact a {
+  -webkit-transition: color var(--link-transition-time) var(--link--transition-funcsion);
   transition: color var(--link-transition-time) var(--link--transition-funcsion);
 }
 
@@ -820,6 +963,8 @@ li .street {
 }
 
 .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-radius: 4px;
   border: 1px solid var(--accent-color);
@@ -864,27 +1009,40 @@ li .street {
   margin-right: 12px;
   background-color: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-size: 16px;
   line-height: 20px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
 .blok_input-mail {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
 .footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .join-item .social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -896,9 +1054,12 @@ li .street {
 }
 
 .join-item .social-link {
+  -webkit-transition-property: background-color;
   transition-property: background-color;
-  transition-duration: var(--link-transition-time);
-  transition-timing-function: var(--link--transition-funcsion);
+  -webkit-transition-duration: var(--link-transition-time);
+          transition-duration: var(--link-transition-time);
+  -webkit-transition-timing-function: var(--link--transition-funcsion);
+          transition-timing-function: var(--link--transition-funcsion);
 }
 
 .blok-join {
@@ -975,9 +1136,13 @@ img {
 }
 
 .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   /* align-items: center; */
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .filter button {
@@ -996,15 +1161,21 @@ img {
 }
 
 .filter button {
+  -webkit-transition-property: color, background-color, -webkit-box-shadow;
+  transition-property: color, background-color, -webkit-box-shadow;
   transition-property: color, background-color, box-shadow;
-  transition-duration: var(--link-transition-time);
-  transition-timing-function: var(--link--transition-funcsion);
+  transition-property: color, background-color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: var(--link-transition-time);
+          transition-duration: var(--link-transition-time);
+  -webkit-transition-timing-function: var(--link--transition-funcsion);
+          transition-timing-function: var(--link--transition-funcsion);
 }
 
 .filter button:hover, .filter button:focus {
   background-color: var(--accent-color);
   color: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .filter li:nth-child(-n + 4) {
@@ -1017,8 +1188,12 @@ header {
 }
 
 nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav .block-contact {
@@ -1026,8 +1201,12 @@ nav .block-contact {
 }
 
 .header-adress .block-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header-adress .block-contact > li:first-child {
@@ -1044,8 +1223,12 @@ nav .block-contact {
 }
 
 .header-adress .contact-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header-adress .contact-link:hover .adress-mail,
@@ -1059,14 +1242,21 @@ nav .block-contact {
 
 .adress-tel,
 .adress-mail {
+  -webkit-transition-property: fill;
   transition-property: fill;
-  transition-duration: var(--link-transition-time);
-  transition-timing-function: var(--link--transition-funcsion);
+  -webkit-transition-duration: var(--link-transition-time);
+          transition-duration: var(--link-transition-time);
+  -webkit-transition-timing-function: var(--link--transition-funcsion);
+          transition-timing-function: var(--link--transition-funcsion);
 }
 
 .header-adress .contact-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header-adress .contact-item:hover .adress-tel,
@@ -1075,9 +1265,13 @@ nav .block-contact {
 }
 
 .site-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 90px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .site-nav li:nth-child(n + 2) {
@@ -1090,9 +1284,12 @@ nav .block-contact {
   line-height: 1.143;
   letter-spacing: 0.02em;
   color: var(--main-color-text);
+  -webkit-transition-property: color;
   transition-property: color;
-  transition-duration: var(--link-transition-time);
-  transition-timing-function: var(--link--transition-funcsion);
+  -webkit-transition-duration: var(--link-transition-time);
+          transition-duration: var(--link-transition-time);
+  -webkit-transition-timing-function: var(--link--transition-funcsion);
+          transition-timing-function: var(--link--transition-funcsion);
 }
 
 .site-nav .link:hover, .site-nav .link:focus {
@@ -1137,15 +1334,21 @@ nav .block-contact {
 }
 
 .header-adress .contact-link {
+  -webkit-transition-property: color;
   transition-property: color;
-  transition-duration: var(--link-transition-time);
-  transition-timing-function: var(--link--transition-funcsion);
+  -webkit-transition-duration: var(--link-transition-time);
+          transition-duration: var(--link-transition-time);
+  -webkit-transition-timing-function: var(--link--transition-funcsion);
+          transition-timing-function: var(--link--transition-funcsion);
 }
 
 .header-adress .contact-item {
+  -webkit-transition-property: color;
   transition-property: color;
-  transition-duration: var(--link-transition-time);
-  transition-timing-function: var(--link--transition-funcsion);
+  -webkit-transition-duration: var(--link-transition-time);
+          transition-duration: var(--link-transition-time);
+  -webkit-transition-timing-function: var(--link--transition-funcsion);
+          transition-timing-function: var(--link--transition-funcsion);
 }
 
 .portfolio-header {
@@ -1174,14 +1377,20 @@ nav .block-contact {
 }
 
 .portfolio-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .portfolio-list .portfolio-link:focus,
 .portfolio-list .portfolio-link:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   outline: none;
 }
 
@@ -1214,8 +1423,12 @@ nav .block-contact {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform var(--link-transition-time) var(--link--transition-funcsion);
+  transition: -webkit-transform var(--link-transition-time) var(--link--transition-funcsion);
   transition: transform var(--link-transition-time) var(--link--transition-funcsion);
+  transition: transform var(--link-transition-time) var(--link--transition-funcsion), -webkit-transform var(--link-transition-time) var(--link--transition-funcsion);
 }
 
 .overlay-wrapper {
@@ -1225,7 +1438,8 @@ nav .block-contact {
 
 .portfolio-link:hover .overlay,
 .portfolio-link:focus .overlay {
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .portfolio-list li:nth-child(3n) {

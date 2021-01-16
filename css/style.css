@@ -249,29 +249,36 @@ nav .block-contact {
 }
 
 /* герой-- */
-
 .hero {
-  /* max-width: 1600px; */
   padding-bottom: 200px;
   /* display: flex; */
   /* flex-wrap: wrap; */
   /* justify-content: center; */
+  margin: 0px auto;
+  /* max-width: 1600px; */
+  /* height: 600px; */
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
-      rgba(122, 128, 196, 0.4)
+      rgba(47, 48, 58, 0.4)
     ),
     url(../img/fon.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.hero_blok-title .title {
-  display: block;
+.hero_blok-title .title-hero {
+  display: flex;
   width: 696px;
-  /* margin: 0px auto; */
-  margin: 0px 452px 0px 452px;
+  margin: 0px auto;
+  /* align-items: center;
+  justify-content: center; */
+
+  margin-right: 452px;
+  margin-left: 452px;
+
   padding-top: 200px;
   margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.363;
@@ -281,13 +288,9 @@ nav .block-contact {
   color: #ffffff;
 }
 /* кнопка */
-.button.button-hero {
-  margin: 0px 700px 0px 700px;
-}
 .button {
   display: block;
   margin: 0px auto;
-
   border-radius: 4px;
   border: 1px solid var(--accent-color);
   padding: 10px 32px;
@@ -297,7 +300,7 @@ nav .block-contact {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  /* align-items: center; */
+  align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
@@ -313,11 +316,16 @@ nav .block-contact {
   justify-content: center;
 }
 
+.button.button-hero {
+  margin-right: 700px;
+  margin-left: 610px;
+}
 /* Преимущества feature*/
 .feature-icon {
   display: inline-flex;
 }
 .box-feature {
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -334,10 +342,11 @@ nav .block-contact {
 }
 
 .feature {
-  padding-bottom: 94px;
+  margin-top: 94px;
+  margin-bottom: 94px;
 }
 .feature > ul {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -347,11 +356,11 @@ nav .block-contact {
   list-style: none;
 }
 
-.feature-list li:not(:last-child) {
+.feature-icon li:not(:last-child) {
   margin-right: 30px;
 }
 
-.feature-list .title {
+.feature-icon .title {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -517,15 +526,20 @@ li .profession {
   transition-timing-function: var(--link--transition-funcsion);
 }
 
+.client-link:focus .client-icon {
+  fill: var(--accent-color);
+}
+
 .blok-client:hover .client-icon,
-.blok-client:focus-within .client-icon {
+.blok-client:focus .client-icon {
   fill: var(--accent-color);
   border: var(--accent-color);
 }
 
 .blok-client:hover,
-.blok-client:focus-within {
+.blok-client:focus {
   border: 1px solid var(--accent-color);
+  outline: none;
 }
 
 .blok-client {
@@ -912,6 +926,7 @@ li .street {
 .portfolio-list .portfolio-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  outline: none;
 }
 
 .portfolio-list li:nth-child(3n) {
